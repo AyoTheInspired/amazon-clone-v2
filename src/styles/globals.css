@@ -1,3 +1,11 @@
+/* THIS IS IN SRC => STYLES => GLOBALS.CSS*/
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+	.link {
+		@apply cursor-pointer hover:underline;
+	}
+}
