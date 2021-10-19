@@ -31,8 +31,10 @@ function Navigation() {
 				</div>
 
 				<div className="text-white flex items-center text-xs space-x-6 mx-6 whitespace-nowrap">
-					<div onClick={() => signIn()} className="link">
-						<p>Hello Ayo!</p>
+					<div
+						onClick={() => (!session ? signIn() : signOut())}
+						className="link">
+						<p>{session ? `Hello, ${session.user.name}` : "Sign In"}</p>
 						<p className="font-extrabold md:text-sm">Account & Lists</p>
 					</div>
 
